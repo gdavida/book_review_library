@@ -1,14 +1,14 @@
 class ToyInventory
   
   def initialize(options={})
-    @toy_name = options[:toy_name]
-    @manufacturer = options[:manufacturer]
-    @age_group = options[:age_group]
-    @pieces = options[:pieces]
-    @barcode = options[:barcode]
-    @cost = options[:cost]
-    @store_purchased_from = options[:store_purchased_from]
-    @date_purchased = options[:date_purchased]
+    @toy_name               = options[:toy_name]
+    @manufacturer           = options[:manufacturer]
+    @age_group              = options[:age_group]
+    @pieces                 = options[:pieces]
+    @barcode                = options[:barcode]
+    @cost                   = options[:cost]
+    @store_purchased_from   = options[:store_purchased_from]
+    @date_purchased         = options[:date_purchased]
   end
 
   #------------------------

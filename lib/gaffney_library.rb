@@ -1,14 +1,14 @@
 class GaffneyLibrary
   
   def initialize(options={})
-    @title = options[:title]
-    @author = options[:author]
-    @illustrator = options[:illustrator]
-    @isbn = options[:isbn]
-    @year_written = options[:year_written]
-    @date_added_to_library = options[:date_added_to_library]
-    @date_read = options[:date_read]
-    @rating = options[:rating]
+    @title                  = options[:title]
+    @author                 = options[:author]
+    @illustrator            = options[:illustrator]
+    @isbn                   = options[:isbn]
+    @year_written           = options[:year_written]
+    @date_added_to_library  = options[:date_added_to_library]
+    @date_read              = options[:date_read]
+    @rating                 = options[:rating]
   end
 
   #------------------------
