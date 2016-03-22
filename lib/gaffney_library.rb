@@ -94,11 +94,11 @@ class GaffneyLibrary
   #------------------------
 
 
-  def eat_some_food(food="delicious snacks")
-    "#{@name} ate some #{food}"
+
+  def most_recent_book_added(date_added_to_library, title)
+    "On #{date_added_to_library}, the book #{title} was added to our library."
+     
   end
-
-
 
 
 
