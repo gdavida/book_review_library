@@ -1,11 +1,25 @@
+
+  ###BOOK REVIEW
+##################################
+#   Checks if string has at least one upcase letter
+#
+#   + title: string representing the title
+#   + author: string representing the authors full name
+#   + year_written: string representing a year
+#
+#   returns A sentence about the book's title and who it was written by and when.
+# ---------------------------------
+#
+
+
 class BookReview
   
-  attr_accessor :review_write, :summary_text
+  attr_accessor :review_write, :summary_text, :rating, :reviewer
 
   def initialize(options ={})
     @short_review           = options[:short_review]
     @summary_text           = options[:summary_text]
-    @rating                 = options[:ratings]
+    @rating                 = options[:rating]
     @reviewer               = options[:reviewer]
   end
 
