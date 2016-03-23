@@ -97,7 +97,7 @@ class ToyInventory
 
 
   def new_toy(age_group, toy_name)
-    "#{toy_name} is the new toy for children ages: #{age_group}"
+    "#{toy_name} is for children ages: #{age_group}"
      
   end
 
