@@ -19,7 +19,9 @@ class BookReview
   def initialize(options ={})
     @short_review           = options[:short_review]
     @summary_text           = options[:summary_text]
-    @rating                 = options[:rating]
+    @rating_quality         = options[:rating_quality]
+    @rating_enjoyment       = options[:rating_enjoyment]
+    @would_you_recommend    = options[:would_you_recommend]
     @reviewer               = options[:reviewer]
   end
 

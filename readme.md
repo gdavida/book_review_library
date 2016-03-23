@@ -1,44 +1,36 @@
 #Three Classes#
 
-## GAFFNEY BOOK LIBRARY
-###(1) gaffney_library.rb
-A class to collect information about the books in our family library.
+## BOOK 
+###(1) book.rb
+A class to collect information about the books books
 Tracks the following information for each entry/book:
 * title
 * author
 * illustrator
 * isbn
 * year written
+* book review ( linked to the book review class )
+
+
+
+## BOOK REVIEW
+##(#2) book_review.rb
+A class to collect information related to the review of a book.
+Tracks the following information for each review:
+* short review
+* summary text
+* quality rating
+* enjoyment rating
+* would you recommend?
+* reviewer
+
+
+
+## LIBRARY
+###(3) library.rb
+A class to collect books and information related to the use of the book.
+Tracks the following informations:
+* book (linked to the book class)
+* location
 * date added to library
-* date read
-* rating
-
-
-
-## TOY LENDING LIBRARY INVENTORY
-##(#2) toy_inventory.rb
-A class to track the toy inventory for the Toy Lending Library.
-Tracks the following information for each entry/toy:
-* toy name
-* manufacturer
-* age group
-* pieces
-* barcode
-* cost
-* store purchased from
-* date purchased
-
-
-
-## PERSONAL ADDRESS BOOK
-###(3) address_book.rb
-A class to collect addresses  for the Toy Lending Library.
-Tracks the following information for each entry/toy:
-* toy name
-* manufacturer
-* age group
-* pieces
-* barcode
-* cost
-* store purchased from
-* date purchased
+* date checked out
