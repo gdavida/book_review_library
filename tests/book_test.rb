@@ -44,12 +44,38 @@ class BookTest < Minitest::Test
   #SETTER TESTS
   #---------------------------
 
-  # def test_age_setter_with_valid_age
-  #   bear = Bear.new(name: "Yogi", age: 78, height: "9-3", humans_eaten: 0)
-    
-  #   bear.age = 81
-  #   assert_equal(81, bear.age)
-  # end
+  def test_title_setter_with_valid_title
+    book = Book.new(title: "UNTITLED", author: "Reshma Saujani", illustrator: "Davida Gaffney", isbn: "123456677834", year_written: "1999")
+    book.title = "Women Who Don't Wait In Line"
+    assert_equal("Women Who Don't Wait In Line", book.title)
+  end
+
+  def test_author_setter_with_valid_author
+    book = Book.new(title: "Women Who Don't Wait In Line", author: "Reshma Saujani", illustrator: "Davida Gaffney", isbn: "123456677834", year_written: "1999")
+    book.author = "Dr.Suess"
+    assert_equal("Dr.Suess", book.author)
+  end
+
+  def test_illustrator_setter_with_valid_illustrator
+    book = Book.new(title: "UNTITLED", author: "Reshma Saujani", illustrator: "Davida Gaffney", isbn: "123456677834", year_written: "1999")
+    book.illustrator= "NONE"
+    assert_equal("NONE", book.illustrator)
+  end
+
+  def test_isbn_setter_with_valid_isbn
+    book = Book.new(title: "Women Who Don't Wait In Line", author: "Reshma Saujani", illustrator: "Davida Gaffney", isbn: "1234566778345", year_written: "1999")
+    book.isbn= "4444444444444"
+    assert_equal("4444444444444", book.isbn)
+  end
+
+  def test_year_written_setter_with_valid_test_year
+    book = Book.new(title: "UNTITLED", author: "Reshma Saujani", illustrator: "Davida Gaffney", isbn: "123456677834", year_written: "1999")
+    book.year_written = "2016"
+    assert_equal("2016", book.year_written)
+  end
+
+
+
 
 end
 
