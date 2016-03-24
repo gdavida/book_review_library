@@ -14,15 +14,13 @@
 
 class BookReview
   
-  attr_accessor :review_write, :summary_text, :rating, :reviewer
+  attr_accessor :reviewer, :short_review, :rating, :would_you_recommend
 
   def initialize(options ={})
-    @short_review           = options[:short_review]
-    @summary_text           = options[:summary_text]
-    @rating_quality         = options[:rating_quality]
-    @rating_enjoyment       = options[:rating_enjoyment]
-    @would_you_recommend    = options[:would_you_recommend]
-    @reviewer               = options[:reviewer]
+    @reviewer             = options[:reviewer]
+    @short_review         = options[:short_review]
+    @rating               = options[:rating]
+    @would_you_recommend  = options[:would_you_recommend]
   end
 
   def short_140_character_review(short_review)
