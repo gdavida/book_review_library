@@ -8,19 +8,19 @@ require_relative "lib/book_review.rb"
 #BUILD A BOOK REVIEW
 def add_a_book_review
 	puts "\n\nBOOK REVIEW\n\n"
-	print "Who is writing this review?"
+	print "Who is writing this review? "
 	reviewer = gets.chomp
 
-	print "What's the name of the book you are reviewing?"
+	print "What's the name of the book you are reviewing? "
 	reviewer = gets.chomp
 
-	print "Please write a short review of the book."
+	print "Please write a short review of the book. "
 	short_review = gets.chomp
 
-	print "Please rate this book. On a scale on 1 (not at all) to 10 (loved it)"
-	rating_quality = gets.chomp
+	print "Please rate this book. On a scale on 1 (not at all) to 10 (loved it) "
+	rating = gets.chomp
 
-	print "Would you recommend this book to others? (y/n)"
+	print "Would you recommend this book to others? (y/n) "
 	would_you_recommend = gets.chomp
 
 	BookReview.new(reviewer: reviewer, short_review: short_review, rating: rating, would_you_recommend: would_you_recommend)
@@ -39,20 +39,24 @@ def add_a_book
 	print "... the author(s)? "
 	author = gets.chomp
 
+	print "Is there an illustrator (y/n)? "
+	is_there_an_illustrator = gets.chomp
 
-	print "Illustrator's name? "
-	illustrator = gets.chomp
-
-	# print "Is there an illustrator (y/n)? "
-	# is_there_an_illustrator = gets.chomp
-
-	# if is_there_an_illustrator?.downcase == "y"
-	# 	print "What is the illustrator's name? "
-	# 	illustrator = gets.chomp
-	# end
+	if is_there_an_illustrator.downcase == "y"
+		print "What is the illustrator's name? "
+		illustrator = gets.chomp
+	else illustrator = "NA"
+	end
 
 	print "Please add the 13-digit ISBN number, using only numbers. "
 	isbn = gets.chomp.to_i
+
+	# while isbn.count("0-9") != 13
+ #    print "Not Valid. \nPlease add the 13-digit ISBN number, using only numbers. "
+	# 	isbn = gets.chomp.to_i
+ #  end
+
+  isbn_return = isbn
 
 	print "What year was the book written in? "
 	year_written = gets.chomp
@@ -133,7 +137,7 @@ puts "---------------------------"
 
 while choice != 0
   puts "\nYou have #{books.length} book(s)."
-  puts "\nHere are your options:\n1. Add a New Book\n2. View Book Report\n3. New Book Review\n2. View Book Review Report\n0. Exit"
+  puts "\nHere are your options:\n1. Add a New Book\n2. View Book Report\n3. New Book Review\n4. View Book Review Report\n0. Exit"
   puts "\nWhat is your choice? "
   print "---------------------\n"
   choice = gets.chomp.to_i
@@ -146,6 +150,8 @@ while choice != 0
   elsif choice == 3
     book_reviews << add_a_book_review
     book_review_report(book_reviews.last)
+  elsif choice == 4
+    report_all_book_reviews(book_reviews)
   elsif choice == 0
     puts "\n\nGoodbye!"
   else
