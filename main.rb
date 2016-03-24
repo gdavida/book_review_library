@@ -7,23 +7,23 @@ require_relative "lib/book_review.rb"
 
 #BUILD A BOOK REVIEW
 def add_a_book_review
-	puts "\n\nBOOK REVIEW\n\n"
-	print "Who is writing this review? "
-	reviewer = gets.chomp
+  puts "\n\nBOOK REVIEW\n\n"
+  print "Who is writing this review? "
+  reviewer = gets.chomp
 
-	print "What's the name of the book you are reviewing? "
-	reviewer = gets.chomp
+  print "What's the name of the book you are reviewing? "
+  reviewer = gets.chomp
 
-	print "Please write a short review of the book. "
-	short_review = gets.chomp
+  print "Please write a short review of the book. "
+  short_review = gets.chomp
 
-	print "Please rate this book. On a scale on 1 (not at all) to 10 (loved it) "
-	rating = gets.chomp
+  print "Please rate this book. On a scale on 1 (not at all) to 10 (loved it) "
+  rating = gets.chomp
 
-	print "Would you recommend this book to others? (y/n) "
-	would_you_recommend = gets.chomp
+  print "Would you recommend this book to others? (y/n) "
+  would_you_recommend = gets.chomp
 
-	BookReview.new(reviewer: reviewer, short_review: short_review, rating: rating, would_you_recommend: would_you_recommend)
+  BookReview.new(reviewer: reviewer, short_review: short_review, rating: rating, would_you_recommend: would_you_recommend)
 
 end
 
@@ -32,37 +32,37 @@ end
 #BUILD BOOK
 #prompt the user to add the information to add a new book's information to the book array
 def add_a_book
-	puts "\n\nADD A NEW BOOK\n\n"
-	print "What is the title of your new book? "
-	title = gets.chomp
+  puts "\n\nADD A NEW BOOK\n\n"
+  print "What is the title of your new book? "
+  title = gets.chomp
 
-	print "... the author(s)? "
-	author = gets.chomp
+  print "... the author(s)? "
+  author = gets.chomp
 
-	print "Is there an illustrator (y/n)? "
-	is_there_an_illustrator = gets.chomp
+  print "Is there an illustrator (y/n)? "
+  is_there_an_illustrator = gets.chomp
 
-	if is_there_an_illustrator.downcase == "y"
-		print "What is the illustrator's name? "
-		illustrator = gets.chomp
-	else illustrator = "NA"
-	end
+  if is_there_an_illustrator.downcase == "y"
+    print "What is the illustrator's name? "
+    illustrator = gets.chomp
+  else illustrator = "NA"
+  end
 
-	print "Please add the 13-digit ISBN number, using only numbers. "
-	isbn = gets.chomp.to_i
+  print "Please add the 13-digit ISBN number, using only numbers. "
+  isbn = gets.chomp.to_i
 
-	# while isbn.count("0-9") != 13
+  # while isbn.count("0-9") != 13
  #    print "Not Valid. \nPlease add the 13-digit ISBN number, using only numbers. "
-	# 	isbn = gets.chomp.to_i
+  #   isbn = gets.chomp.to_i
  #  end
 
-  isbn_return = isbn
+  # isbn_return = isbn
 
-	print "What year was the book written in? "
-	year_written = gets.chomp
+  print "What year was the book written in? "
+  year_written = gets.chomp
 
-	#need default value for illustrator to be "none", in case there is none
-	Book.new(title: title, author: author, illustrator: illustrator, isbn: isbn, year_written: year_written)
+  #need default value for illustrator to be "none", in case there is none
+  Book.new(title: title, author: author, illustrator: illustrator, isbn: isbn, year_written: year_written)
 
 end
 
@@ -71,12 +71,12 @@ end
 # BOOK REVIEW REPORT
 
 def book_review_report(book_review)
-	puts "\nYou just added a new review.\n"
-	puts "\nBOOK REVIEW\n\n"
-	puts "reviewer:  #{book_review.reviewer} "
-	puts "short_review:  #{book_review.short_review} "
-	puts "rating:  #{book_review.rating} "
-	puts "would_you_recommend:  #{book_review.would_you_recommend} "
+  puts "\nYou just added a new review.\n"
+  puts "\nBOOK REVIEW\n\n"
+  puts "reviewer:  #{book_review.reviewer} "
+  puts "short_review:  #{book_review.short_review} "
+  puts "rating:  #{book_review.rating} "
+  puts "would_you_recommend:  #{book_review.would_you_recommend} "
 end
 
 
@@ -84,12 +84,12 @@ end
 #BOOK REPORT
 
 def book_report(book)
-	puts "\nYou just added a new book.\n"
-	puts "title:  #{book.title} "
-	puts "author:  #{book.author} "
-	puts "illustrator:  #{book.illustrator} "
-	puts "isbn:  #{book.isbn} "
-	puts "year_written:  #{book.year_written} "
+  puts "\nYou just added a new book.\n"
+  puts "title:  #{book.title} "
+  puts "author:  #{book.author} "
+  puts "illustrator:  #{book.illustrator} "
+  puts "isbn:  #{book.isbn} "
+  puts "year_written:  #{book.year_written} "
 end
 
 
